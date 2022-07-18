@@ -8,6 +8,7 @@ import { ChartPieIcon, CogIcon, LogoutIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import Logo from '@/components/Logo'
 import ButtonLink from '@/components/ui/ButtonLink'
+import Avatar from '@/components/ui/Avatar'
 
 const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
     const router = useRouter()
@@ -33,9 +34,12 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                     className="relative inline-block text-left">
                                     <div>
                                         <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                                            {user.email}
+                                            <Avatar
+                                                className={'h-8 w-8'}
+                                                user={user}
+                                            />
                                             <ChevronDownIcon
-                                                className="relative top-1 ml-1 -mr-1 h-4 w-4"
+                                                className="relative top-1 -mr-1 h-5 w-5"
                                                 aria-hidden="true"
                                             />
                                         </Menu.Button>

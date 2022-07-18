@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import DefaultLayout from '@/components/layouts/DefaultLayout'
 import AddUserModal from '@/components/admin/AddUserModal'
@@ -9,12 +8,13 @@ import { Role } from '@/types/auth'
 import { NextPage } from 'next'
 import { User } from '@/types/user'
 import DeleteUserModal from '@/components/admin/DeleteUserModal'
+import Avatar from '@/components/ui/Avatar'
 
 const Index: NextPage = () => {
     const { user: user }: { user: User } = useAuth({
         middleware: 'admin'
     })
-    const { users, isLoading, isError, isValidating } = useUsers()
+    const { users, isLoading, isValidating } = useUsers()
 
     if (!user) return <></>
 
@@ -53,15 +53,9 @@ const Index: NextPage = () => {
                                                 key={user.id}
                                                 className="items-center px-4 py-3 sm:grid sm:grid-cols-10 sm:gap-4 sm:px-6">
                                                 <div className="col-span-1 flex items-center justify-center">
-                                                    <Image
-                                                        alt={
-                                                            user.name +
-                                                            "'s Avatar"
-                                                        }
-                                                        className="rounded-full"
-                                                        src={user.avatar}
-                                                        width={46}
-                                                        height={46}
+                                                    <Avatar
+                                                        user={user}
+                                                        className="h-12 w-12"
                                                     />
                                                 </div>
                                                 <div className="col-span-3">
