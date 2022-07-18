@@ -28,6 +28,12 @@ The following are preinstalled and ready out of the box for quick application sc
 
 ## Getting Started
 
+Create an `.env` file and place your API url.
+
+```bash
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+```
+
 ### Development
 First, run the development server:
 

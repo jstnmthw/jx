@@ -10,10 +10,6 @@ export default function Document() {
                 />
                 <link rel="icon" href="/jx.svg" />
                 <meta
-                    name="viewport"
-                    content="initial-scale=1.0, width=device-width"
-                />
-                <meta
                     name="description"
                     content="An opinionated application starter kit to built on
                     NextJS tailored for Laravel's Sanctum API."
