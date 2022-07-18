@@ -1,7 +1,7 @@
 # Jx - Starter kit for NextJS apps.
 
-![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 ![ts](https://img.shields.io/github/v/release/jstnmthw/jx?include_prereleases)
+![ts](https://img.shields.io/github/workflow/status/jstnmthw/jx/Build)
 
 An opinionated application starter kit to built on NextJS tailored to Laravel Sanctum API. The authentication is mainly focused on using Laravel's backend API which utilizes CRSF token for secure authentication and sessions. 
 
