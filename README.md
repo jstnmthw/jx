@@ -1,11 +1,21 @@
 # Jx - Starter kit for NextJS apps.
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
-![ts](https://badgen.net/badge/version/0.1.0/green)
+![ts](https://img.shields.io/github/v/release/jstnmthw/jx?include_prereleases)
 
 An opinionated application starter kit to built on NextJS tailored to Laravel Sanctum API. The authentication is mainly focused on using Laravel's backend API which utilizes CRSF token for secure authentication and sessions. 
 
-## The following are preinstalled and ready out of the box for quick application scaffolding.
+## Features
+- [Laravel Sanctum](https://laravel.com/docs/9.x/starter-kits#breeze-and-next) compatible
+- Authentication
+- Roles & Permissions
+- Data Tables
+- Dark Mode
+- SWR Requests
+
+## Packages Included
+
+The following are preinstalled and ready out of the box for quick application scaffolding.
 
 - [TailwindCSS](https://tailwindcss.com/)
 - [Hero Icons](https://heroicons.com/)
@@ -15,14 +25,6 @@ An opinionated application starter kit to built on NextJS tailored to Laravel Sa
 - [React Table](https://tanstack.com/table/v8/?from=reactTableV7&original=https://react-table-v7.tanstack.com/)
 - [React Cookie](https://github.com/reactivestack/cookies)
 - [Next Themes](https://github.com/pacocoursey/next-themes)
-
-## Features
-- [Laravel Sanctum](https://laravel.com/docs/9.x/starter-kits#breeze-and-next) compatible
-- Authentication
-- Roles & Permissions
-- Data Tables
-- Dark Mode
-- SWR Requests
 
 ## Getting Started
 
