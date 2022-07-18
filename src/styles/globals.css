@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #__next {
+        @apply flex min-h-screen flex-col;
+    }
+    #__main {
+        @apply flex flex-1
+    }
+    .text-gradient {
+        @apply bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent;
+    }
+    .text-gradient-hover {
+        @apply hover:bg-gradient-to-r hover:from-blue-500 hover:to-sky-400 hover:bg-clip-text hover:text-transparent;
+    }
+    .text-gradient-alt {
+        @apply bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent;
+    }
+    .text-gradient-hover-alt {
+        @apply hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-600 hover:bg-clip-text hover:text-transparent;
+    }
+}
