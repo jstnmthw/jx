@@ -20,6 +20,15 @@ module.exports = {
                     800: '#00224B',
                     900: '#000913'
                 }
+            },
+            animation: {
+                gradient: 'gradient 3s linear infinite'
+            },
+            keyframes: {
+                gradient: {
+                    '0%, 100%': { 'background-position': '0% 50%' },
+                    '50%': { 'background-position': '100% 50%' }
+                }
             }
         }
     },
