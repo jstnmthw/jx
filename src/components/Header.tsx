@@ -1,32 +1,58 @@
-import { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { User } from '@/types/user'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, MenuAlt2Icon, XIcon } from '@heroicons/react/solid'
 import { ChartPieIcon, CogIcon, LogoutIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import Logo from '@/components/Logo'
 import ButtonLink from '@/components/ui/ButtonLink'
 import Avatar from '@/components/ui/Avatar'
+import DarkModeButton from '@/components/ui/DarkModeButton'
+import Button from '@/components/ui/Button'
+import Modal from '@/components/ui/Modal'
 
 const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
     const router = useRouter()
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    function handleClose() {
+        setMenuOpen(false)
+    }
+
     return (
-        <nav>
-            <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between">
-                    <Link href="/">
-                        <a>
-                            <h1>
-                                <Logo className={'h-[38px]'} />
-                                <span className="sr-only">
-                                    Jx - NextJS Starter Kit
-                                </span>
-                            </h1>
-                        </a>
-                    </Link>
+        <nav className="w-full border-b dark:border-slate-700 md:border-0">
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div className="flex h-16 items-center justify-between">
+                    <div className="flex items-center gap-4">
+                        <Link href="/">
+                            <a>
+                                <h1 className="text-slate-900 dark:text-white">
+                                    <Logo className="h-[32px]" />
+                                    <span className="sr-only">
+                                        Jx - Next.js Starter Kit
+                                    </span>
+                                </h1>
+                            </a>
+                        </Link>
+                        <div className="hidden text-sm font-medium text-slate-500 dark:text-slate-500 md:block">
+                            <span className="text-lg font-bold text-slate-900 dark:text-white">
+                                Jx
+                            </span>{' '}
+                            &mdash; Built with Next.js, tailored for
+                            Laravel&apos;s API.
+                        </div>
+                    </div>
                     <div className="flex flex-row items-center gap-5">
+                        <DarkModeButton
+                            iconOnly
+                            className="flex flex-none items-center justify-center rounded-md border bg-white p-1 text-slate-600 shadow transition-all hover:text-slate-900 dark:border-slate-700 dark:bg-transparent dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-200"
+                        />
+                        <Button className="group text-sm font-medium text-slate-600 transition-colors dark:text-slate-400 dark:hover:text-slate-300">
+                            v0.1.0
+                            <ChevronDownIcon className="inline-block h-4 w-4 transition-colors dark:text-slate-600 dark:group-hover:text-slate-500" />
+                        </Button>
                         {user ? (
                             <>
                                 <Menu
@@ -110,18 +136,66 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                 </Menu>
                             </>
                         ) : (
-                            <>
-                                <Link href="/login">
-                                    <a className="font-medium">Login</a>
-                                </Link>
-                                <Link href="/register" passHref>
-                                    <ButtonLink
-                                        buttonType="primary"
-                                        className="font-medium">
-                                        Register
-                                    </ButtonLink>
-                                </Link>
-                            </>
+                            <div className="flex items-center">
+                                <Button
+                                    aria-label="Open navigation"
+                                    onClick={() => setMenuOpen(true)}
+                                    buttonType="light"
+                                    className="p-1.5 md:hidden">
+                                    <MenuAlt2Icon className="h-6 w-6" />
+                                </Button>
+                                <Modal
+                                    backgroundBlur
+                                    shadowClass="shadow"
+                                    positionClass="fixed -top-7 -right-7 overflow-y-auto"
+                                    isOpen={menuOpen}
+                                    handleClose={handleClose}
+                                    body={
+                                        <div className="px-6 py-4">
+                                            <button
+                                                className="absolute right-4 top-4"
+                                                type="button"
+                                                onClick={handleClose}
+                                                aria-label="Close navigation">
+                                                <XIcon className="block h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-600" />
+                                            </button>
+                                            <div className="flex w-72 flex-col">
+                                                <Link href="/login" passHref>
+                                                    <a className="p-2 font-semibold hover:text-blue">
+                                                        Login
+                                                    </a>
+                                                </Link>
+                                                <Link href="/register" passHref>
+                                                    <a className="p-2 font-semibold hover:text-blue">
+                                                        Register
+                                                    </a>
+                                                </Link>
+                                                <Link href="/register" passHref>
+                                                    <a className="p-2 font-semibold hover:text-blue">
+                                                        Docs
+                                                    </a>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    }
+                                />
+                                <div className="hidden gap-3 md:flex">
+                                    <Link href="/login" passHref>
+                                        <ButtonLink
+                                            buttonType="light"
+                                            className="w-full shadow-md hover:shadow-sm">
+                                            Login
+                                        </ButtonLink>
+                                    </Link>
+                                    <Link href="/register" passHref>
+                                        <ButtonLink
+                                            buttonType="primary"
+                                            className="w-full font-medium">
+                                            Register
+                                        </ButtonLink>
+                                    </Link>
+                                </div>
+                            </div>
                         )}
                     </div>
                 </div>

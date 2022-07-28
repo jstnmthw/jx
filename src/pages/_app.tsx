@@ -7,7 +7,7 @@ import { ThemeProvider } from 'next-themes'
 function App({ Component, pageProps }: AppProps) {
     return (
         <CookiesProvider>
-            <ThemeProvider>
+            <ThemeProvider attribute={'class'} disableTransitionOnChange={true}>
                 <Component {...pageProps} />
             </ThemeProvider>
         </CookiesProvider>

@@ -1,9 +1,13 @@
 module.exports = {
+    darkMode: 'class',
     content: ['./src/pages/**/*.tsx', './src/components/**/*.tsx'],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+            animation: {
+                gradient: 'gradient 3s linear infinite'
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
             },
             colors: {
                 blue: {
@@ -21,8 +25,8 @@ module.exports = {
                     900: '#000913'
                 }
             },
-            animation: {
-                gradient: 'gradient 3s linear infinite'
+            fontFamily: {
+                sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
             },
             keyframes: {
                 gradient: {

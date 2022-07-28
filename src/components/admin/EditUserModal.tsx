@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react'
 import { User } from '@/types/user'
+import { XIcon } from '@heroicons/react/solid'
+import { PencilAltIcon } from '@heroicons/react/outline'
 import Modal from '@/components/ui/Modal'
 import Button from '@/components/ui/Button'
 import UserForm from '@/components/admin/UserForm'
-import { XIcon } from '@heroicons/react/solid'
-import { PencilAltIcon } from '@heroicons/react/outline'
 
 const EditUserModal: FC<{ user: User }> = ({ user }) => {
     const [isOpen, setIsOpen] = useState(false)

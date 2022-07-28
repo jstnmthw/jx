@@ -12,7 +12,7 @@ export default function Document() {
                 <meta
                     name="description"
                     content="An opinionated application starter kit to built on
-                    NextJS tailored for Laravel's Sanctum API."
+                    Next.js tailored for Laravel's Sanctum API."
                 />
             </Head>
             <body>
