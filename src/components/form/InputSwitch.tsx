@@ -35,10 +35,10 @@ const InputSwitch: FC<InputSwitchProps> = ({
                     }}
                     className={`
                     ${className && className} 
-                    ${enabled ? 'bg-emerald-500' : 'bg-gray-200'} 
+                    ${enabled ? 'bg-emerald-500' : 'bg-slate-200'} 
                     ${
                         disabled && 'cursor-not-allowed'
-                    } relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500/20 focus:ring-offset-2`}>
+                    } relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:ring-offset-2`}>
                     <span
                         className={`${
                             enabled ? 'translate-x-6' : 'translate-x-1'

@@ -56,7 +56,7 @@ const Modal: FC<ModelProps> = ({
                                     {header && (
                                         <Dialog.Title
                                             as="h3"
-                                            className="text-lg font-medium leading-6 text-gray-900">
+                                            className="text-lg font-medium leading-6 text-slate-900">
                                             {header}
                                         </Dialog.Title>
                                     )}

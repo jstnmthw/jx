@@ -8,7 +8,7 @@ const Label: FC<React.ComponentPropsWithoutRef<'label'>> = ({
     <label
         className={
             (className ? className + ' ' : '') +
-            'text-sm font-medium text-gray-700'
+            'text-sm font-medium text-slate-700'
         }
         {...props}>
         {children}

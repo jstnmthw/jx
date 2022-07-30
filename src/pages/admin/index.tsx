@@ -39,14 +39,14 @@ const Index: NextPage = () => {
                         </div>
                         {users && (!isLoading || !isValidating) ? (
                             <div className="mb-20 w-full overflow-hidden bg-white shadow sm:rounded-lg">
-                                <div className="bg-gray-50 px-4 py-3 text-xs font-medium uppercase text-gray-500 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
+                                <div className="bg-slate-50 px-4 py-3 text-xs font-medium uppercase text-slate-500 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
                                     <div></div>
                                     <div>Name</div>
                                     <div>Status</div>
                                     <div>Roles</div>
                                     <div></div>
                                 </div>
-                                <div className="border-t border-gray-200">
+                                <div className="border-t border-slate-200">
                                     {users.map(user => {
                                         return (
                                             <div
@@ -62,7 +62,7 @@ const Index: NextPage = () => {
                                                     <div className="font-medium text-black">
                                                         {user.name}
                                                     </div>
-                                                    <div className="text-sm text-gray-600">
+                                                    <div className="text-sm text-slate-600">
                                                         {user.email}
                                                     </div>
                                                 </div>
@@ -82,7 +82,7 @@ const Index: NextPage = () => {
                                                         (role: Role) => {
                                                             return (
                                                                 <span
-                                                                    className="mr-2 rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-800"
+                                                                    className="mr-2 rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-800"
                                                                     key={
                                                                         role.id
                                                                     }>

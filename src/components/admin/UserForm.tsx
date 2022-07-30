@@ -333,9 +333,9 @@ const UserForm: FC<{
                     onChange={setSelectedRoles}
                     name="roles"
                     multiple>
-                    <Listbox.Button className="relative w-full cursor-default rounded-lg border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm">
+                    <Listbox.Button className="relative w-full cursor-default rounded-lg border border-slate-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm">
                         {!selectedRoles.length && (
-                            <span className="leading-tight text-gray-400">
+                            <span className="leading-tight text-slate-400">
                                 Select roles
                             </span>
                         )}
@@ -361,7 +361,7 @@ const UserForm: FC<{
                         </div>
                         <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                             <SelectorIcon
-                                className="h-5 w-5 text-gray-400"
+                                className="h-5 w-5 text-slate-400"
                                 aria-hidden="true"
                             />
                         </span>
@@ -373,7 +373,7 @@ const UserForm: FC<{
                         leaveTo="opacity-0">
                         <Listbox.Options
                             static
-                            className="shadow-xs absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md rounded-md border border-gray-200 bg-white py-1 text-base shadow-lg focus:outline-none">
+                            className="shadow-xs absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md rounded-md border border-slate-200 bg-white py-1 text-base shadow-lg focus:outline-none">
                             {roles?.map(role => (
                                 <Listbox.Option
                                     key={role}
@@ -381,7 +381,7 @@ const UserForm: FC<{
                                     className={({ active }) => {
                                         return classNames(
                                             'relative cursor-default select-none py-2 pl-3 pr-9 focus:outline-none',
-                                            active ? 'bg-gray-100' : ''
+                                            active ? 'bg-slate-100' : ''
                                         )
                                     }}>
                                     {({ active, selected }) => {
@@ -428,7 +428,7 @@ const UserForm: FC<{
                     name="verify-email"
                     defaultValue={enableAccount}
                     onChange={checked => setEnableAccount(checked)}>
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-700">
                         Enable Account
                     </span>
                 </InputSwitch>
@@ -438,7 +438,7 @@ const UserForm: FC<{
                     name="verify-email"
                     defaultValue={verifyEmail}
                     onChange={checked => setVerifyEmail(checked)}>
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-700">
                         Email Verified
                     </span>
                 </InputSwitch>
@@ -449,7 +449,7 @@ const UserForm: FC<{
                     buttonType="light"
                     disabled={loading}
                     onClick={handleClose}
-                    className="hover:text-gray-700">
+                    className="hover:text-slate-700">
                     Cancel
                 </Button>
                 <Button type="submit" buttonType="primary" loading={loading}>

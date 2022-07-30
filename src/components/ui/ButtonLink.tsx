@@ -11,7 +11,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         switch (buttonType) {
             case 'light':
                 selectedStyle =
-                    'border border-slate-300 dark:border-slate-600 dark:text-slate-300 dark:hover:text-white dark:hover:bg-transparent dark:hover:border-slate-500 transition-all text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none dark:ring-offset-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                    'border border-slate-300 dark:border-slate-600 dark:text-slate-300 dark:hover:text-white dark:hover:bg-transparent dark:hover:border-slate-500 transition-all text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none dark:ring-offset-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                 break
             case 'primary':
                 selectedStyle =

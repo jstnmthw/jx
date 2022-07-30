@@ -133,7 +133,7 @@ const Register: NextPage = () => {
                     </form>
                     <div className="flex items-center justify-center">
                         <Link href="/login">
-                            <a className="text-sm text-gray-600 hover:text-gray-900 hover:underline">
+                            <a className="text-sm text-slate-600 hover:text-slate-900 hover:underline">
                                 Already have an account?
                             </a>
                         </Link>
