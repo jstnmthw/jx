@@ -47,27 +47,31 @@ const Login: NextPage = () => {
             </Head>
             <main
                 id="__main"
-                className="items-center justify-center bg-gray-50">
+                className="items-center justify-center bg-slate-50 dark:bg-slate-900">
                 <div>
                     <div className="mb-2 flex justify-center">
                         <Link href="/">
                             <a title="Homepage">
-                                <Logo className="h-14 w-14" />
+                                <Logo className="h-14 w-14 text-blue" />
                             </a>
                         </Link>
                     </div>
-                    <h2 className="mb-5 text-center text-xl font-semibold">
+                    <h2 className="mb-5 text-center text-xl font-semibold dark:text-slate-100">
                         Sign In
                     </h2>
                     <div className="relative">
                         <GradientShadow position="bottom" />
                         <form
                             onSubmit={submitForm}
-                            className="relative mb-6 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow">
+                            className="relative mb-6 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow dark:border-t dark:border-slate-700 dark:bg-slate-800">
                             <div>
                                 <ErrorCard errors={errors} className="mb-3" />
                                 <StatusCard status={status} />
-                                <Label htmlFor="email">Email</Label>
+                                <Label
+                                    htmlFor="email"
+                                    className="dark:text-slate-400">
+                                    Email
+                                </Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -81,7 +85,11 @@ const Login: NextPage = () => {
                                 />
                             </div>
                             <div className="mt-4">
-                                <Label htmlFor="password">Password</Label>
+                                <Label
+                                    htmlFor="password"
+                                    className="dark:text-slate-400">
+                                    Password
+                                </Label>
                                 <Input
                                     id="password"
                                     type="password"
@@ -102,16 +110,16 @@ const Login: NextPage = () => {
                                         id="remember_me"
                                         type="checkbox"
                                         name="remember"
-                                        className="rounded border-gray-300 text-blue-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                                        className="rounded border-slate-300 text-blue-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:border-t dark:border-slate-600 dark:bg-slate-700 dark:checked:border-blue dark:checked:bg-blue dark:focus:ring-offset-slate-800"
                                     />
-                                    <span className="ml-2 text-sm text-gray-600">
+                                    <span className="ml-2 text-sm text-slate-600 dark:text-slate-300">
                                         Remember me
                                     </span>
                                 </label>
                             </div>
                             <div className="mt-4 flex items-center justify-between">
                                 <Link href="/forgot-password">
-                                    <a className="text-sm text-gray-600 underline hover:text-gray-900">
+                                    <a className="text-sm text-slate-600 underline hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200">
                                         Forgot your password?
                                     </a>
                                 </Link>
@@ -126,7 +134,7 @@ const Login: NextPage = () => {
                     </div>
                     <div className="text-center">
                         <Link href="/register">
-                            <a className="text-sm text-gray-600 underline hover:text-gray-900">
+                            <a className="text-sm text-slate-600 underline hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200">
                                 Don&apos;t have an account?
                             </a>
                         </Link>
