@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes'
 import { DesktopComputerIcon, MoonIcon } from '@heroicons/react/solid'
 import { SunIcon } from '@heroicons/react/outline'
-import { FC, Fragment, useEffect, useState } from 'react'
+import React, { FC, Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 
 const DarkModeButton: FC<{ iconOnly?: boolean; className?: string }> = ({
@@ -17,25 +17,30 @@ const DarkModeButton: FC<{ iconOnly?: boolean; className?: string }> = ({
 
     return (
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className={className}>
-                {theme === 'light' && (
-                    <>
-                        <SunIcon className="inline-block h-4 w-4" />
-                        {iconOnly || <span className="ml-1.5">Light</span>}
-                    </>
-                )}
-                {theme === 'dark' && (
-                    <>
-                        <MoonIcon className="inline-block h-4 w-4" />
-                        {iconOnly || <span className="ml-1.5">Dark</span>}
-                    </>
-                )}
-                {theme === 'system' && (
-                    <>
-                        <DesktopComputerIcon className="inline-block h-4 w-4" />
-                        {iconOnly || <span className="ml-1.5">Dark</span>}
-                    </>
-                )}
+            <Menu.Button as={React.Fragment}>
+                <button
+                    type="button"
+                    className={className}
+                    aria-label="Theme menu">
+                    {theme === 'light' && (
+                        <>
+                            <SunIcon className="inline-block h-4 w-4" />
+                            {iconOnly || <span className="ml-1.5">Light</span>}
+                        </>
+                    )}
+                    {theme === 'dark' && (
+                        <>
+                            <MoonIcon className="inline-block h-4 w-4" />
+                            {iconOnly || <span className="ml-1.5">Dark</span>}
+                        </>
+                    )}
+                    {theme === 'system' && (
+                        <>
+                            <DesktopComputerIcon className="inline-block h-4 w-4" />
+                            {iconOnly || <span className="ml-1.5">Dark</span>}
+                        </>
+                    )}{' '}
+                </button>
             </Menu.Button>
             <Transition
                 as={Fragment}
