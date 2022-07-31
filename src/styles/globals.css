@@ -21,4 +21,16 @@
     .text-gradient-hover-alt {
         @apply hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-600 hover:bg-clip-text hover:text-transparent;
     }
+    .highlight {
+        @apply dark:border-0 dark:border-t dark:border-slate-700
+    }
+    .highlight-hover {
+        @apply dark:border-0 dark:border-t dark:border-slate-700 dark:hover:border-slate-600 group-hover:border-slate-600
+    }
+    .highlight-lighter {
+        @apply dark:border-0 dark:border-t dark:border-slate-700
+    }
+    .highlight-lighter-hover {
+        @apply dark:border-0 dark:border-t dark:border-slate-600 dark:hover:border-slate-500 group-hover:border-slate-500
+    }
 }

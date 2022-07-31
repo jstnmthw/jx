@@ -45,7 +45,7 @@ const DarkModeButton: FC<{ iconOnly?: boolean; className?: string }> = ({
                 leave="transition ease-in duration-75"
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95">
-                <Menu.Items className="pointer-events-auto absolute right-0 z-10 mt-2 w-32 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
+                <Menu.Items className="highlight pointer-events-auto absolute right-0 z-10 mt-2 w-32 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
                     <div className="px-2 py-2">
                         {Themes().map(themeItem => {
                             const ThemeIcon = themeItem.icon
@@ -59,21 +59,22 @@ const DarkModeButton: FC<{ iconOnly?: boolean; className?: string }> = ({
                                             }}
                                             className={`${
                                                 active
-                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-700 dark:text-slate-100'
+                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-100'
                                                     : 'text-slate-600 dark:text-slate-400'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
                                             <div
                                                 className={
-                                                    (themeItem.name === theme &&
-                                                        'text-blue') +
-                                                    ' mr-2 flex h-6 w-6 flex-none items-center justify-center rounded-md bg-white shadow ring-1 ring-slate-900/10 dark:border dark:border-slate-700 dark:bg-slate-800 dark:shadow-none'
+                                                    (themeItem.name === theme
+                                                        ? 'dark:bg-blue'
+                                                        : 'highlight-lighter-hover') +
+                                                    ' mr-2 flex h-6 w-6 flex-none items-center justify-center rounded-md bg-white shadow ring-1 ring-slate-900/10 dark:bg-slate-700 dark:shadow-none'
                                                 }>
                                                 <ThemeIcon
                                                     className={
                                                         (themeItem.name ===
                                                         theme
-                                                            ? 'text-blue'
-                                                            : 'text-slate-400 group-hover:text-slate-500') +
+                                                            ? 'text-blue dark:text-white'
+                                                            : 'text-slate-400 group-hover:text-slate-500 dark:group-hover:text-slate-300') +
                                                         ' h-4 w-4'
                                                     }
                                                 />

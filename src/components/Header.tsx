@@ -47,7 +47,7 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                     <div className="flex flex-row items-center gap-5">
                         <DarkModeButton
                             iconOnly
-                            className="flex flex-none items-center justify-center rounded-md border bg-white p-1 text-slate-600 shadow transition-all hover:text-slate-900 dark:border-slate-700 dark:bg-transparent dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-200"
+                            className="highlight-hover flex flex-none items-center justify-center rounded-md border bg-white p-1 text-slate-600 shadow transition-all hover:text-slate-900 dark:bg-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
                         />
                         <Button className="group text-sm font-medium text-slate-600 transition-colors dark:text-slate-400 dark:hover:text-slate-300">
                             v0.1.0

@@ -28,7 +28,7 @@ const Index: NextPage = () => {
                     Includes the following packages out of the box:
                 </h2>
                 <div className="mb-10 flex max-w-3xl flex-wrap justify-center gap-3 md:mb-20 md:gap-5">
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://laravel.com/docs/9.x/sanctum"
                             target="_blank"
@@ -36,13 +36,13 @@ const Index: NextPage = () => {
                             Sanctum
                         </a>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <span>Authentication</span>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <span>Roles/Permissions</span>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://tailwindcss.com/"
                             target="_blank"
@@ -50,7 +50,7 @@ const Index: NextPage = () => {
                             Tailwind CSS
                         </a>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://heroicons.com/"
                             target="_blank"
@@ -58,7 +58,7 @@ const Index: NextPage = () => {
                             Heroicons
                         </a>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://headlessui.dev/"
                             target="_blank"
@@ -66,7 +66,7 @@ const Index: NextPage = () => {
                             Headless UI
                         </a>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://github.com/pacocoursey/next-themes"
                             target="_blank"
@@ -74,7 +74,7 @@ const Index: NextPage = () => {
                             Dark Mode
                         </a>
                     </h3>
-                    <h3 className="whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-slate-100">
+                    <h3 className="highlight whitespace-nowrap rounded-md border border-slate-200 bg-white p-2 font-medium text-slate-700 shadow-sm dark:bg-slate-800 dark:text-slate-100">
                         <a
                             href="https://www.typescriptlang.org/"
                             target="_blank"
@@ -87,7 +87,7 @@ const Index: NextPage = () => {
                     <a
                         target="_blank"
                         href="https://nextjs.org/docs"
-                        className="group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-white"
+                        className="highlight-hover group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm transition-colors dark:bg-slate-800 dark:text-white"
                         rel="noreferrer">
                         <h2 className="text-2xl font-bold group-hover:underline">
                             Documentation &rarr;
@@ -100,7 +100,7 @@ const Index: NextPage = () => {
                     <a
                         target="_blank"
                         href="https://nextjs.org/learn"
-                        className="group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-white"
+                        className="highlight-hover group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm transition-colors dark:bg-slate-800 dark:text-white"
                         rel="noreferrer">
                         <h2 className="text-2xl font-bold group-hover:underline">
                             Learn &rarr;
@@ -113,7 +113,7 @@ const Index: NextPage = () => {
                     <a
                         target="_blank"
                         href="https://github.com/vercel/next.js/tree/master/examples"
-                        className="group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-white"
+                        className="highlight-hover group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm transition-colors dark:bg-slate-800 dark:text-white"
                         rel="noreferrer">
                         <h2 className="text-2xl font-bold group-hover:underline">
                             Examples &rarr;
@@ -126,7 +126,7 @@ const Index: NextPage = () => {
                     <a
                         target="_blank"
                         href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className="group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm dark:border-transparent dark:bg-slate-800 dark:text-white"
+                        className="highlight-hover group w-full rounded-xl border bg-white p-6 text-left text-slate-700 shadow-sm transition-colors dark:bg-slate-800 dark:text-white"
                         rel="noreferrer">
                         <h2 className="text-2xl font-bold group-hover:underline">
                             Deploy &rarr;
