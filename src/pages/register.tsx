@@ -41,17 +41,17 @@ const Register: NextPage = () => {
                             </a>
                         </Link>
                     </div>
-                    <h2 className="text-center text-xl font-semibold">
+                    <h2 className="mb-5 text-center text-xl font-semibold">
                         Register
                     </h2>
                     <form
                         onSubmit={submitForm}
-                        className="mb-8 w-[400px] rounded-lg p-10 shadow-xl">
+                        className="highlight mb-8 w-[400px] rounded-lg p-10 shadow-xl dark:bg-slate-800">
                         <ErrorCard errors={errors} className="mb-3" />
                         <div className="mb-4">
                             <Label
                                 htmlFor="name"
-                                className="mb-1.5 inline-block">
+                                className="mb-1.5 inline-block dark:text-slate-300">
                                 Name:
                             </Label>
                             <Input
@@ -69,7 +69,7 @@ const Register: NextPage = () => {
                         <div className="mb-4">
                             <Label
                                 htmlFor="email"
-                                className="mb-1.5 inline-block">
+                                className="mb-1.5 inline-block dark:text-slate-300">
                                 Email:
                             </Label>
                             <Input
@@ -87,7 +87,7 @@ const Register: NextPage = () => {
                         <div className="mb-4">
                             <Label
                                 htmlFor="password"
-                                className="mb-1.5 inline-block">
+                                className="mb-1.5 inline-block dark:text-slate-300">
                                 Password:
                             </Label>
                             <Input
@@ -105,7 +105,7 @@ const Register: NextPage = () => {
                         <div className="mb-6">
                             <Label
                                 htmlFor="password-confirm"
-                                className="mb-1.5 inline-block">
+                                className="mb-1.5 inline-block dark:text-slate-300">
                                 Confirm Password:
                             </Label>
                             <Input
