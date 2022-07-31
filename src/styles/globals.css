@@ -33,4 +33,7 @@
     .highlight-lighter-hover {
         @apply dark:border-0 dark:border-t dark:border-slate-600 dark:hover:border-slate-500 group-hover:border-slate-500
     }
+    .lowlight {
+        @apply dark:border-0 dark:border-b dark:border-slate-700
+    }
 }

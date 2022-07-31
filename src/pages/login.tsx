@@ -63,7 +63,7 @@ const Login: NextPage = () => {
                         <GradientShadow position="bottom" />
                         <form
                             onSubmit={submitForm}
-                            className="relative mb-6 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow dark:border-t dark:border-slate-700 dark:bg-slate-800">
+                            className="highlight relative mb-6 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow dark:bg-slate-800">
                             <div>
                                 <ErrorCard errors={errors} className="mb-3" />
                                 <StatusCard status={status} />

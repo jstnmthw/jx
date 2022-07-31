@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({
             break
         case 'primary':
             selectedStyle =
-                'rounded-md shadow-lg shadow-blue-500/50 hover:shadow-md dark:shadow-none text-white bg-blue-500 transition-colors hover:bg-blue-400 focus:outline-none focus:ring-2 dark:ring-offset-slate-900 focus:ring-offset-2 focus:ring-blue-500 relative active:top-0.5'
+                'px-4 py-2 rounded-md shadow-lg shadow-blue-500/50 hover:shadow-md dark:shadow-none text-white bg-blue-500 transition-colors hover:bg-blue-400 focus:outline-none focus:ring-2 dark:ring-offset-slate-900 focus:ring-offset-2 focus:ring-blue-500 relative active:top-0.5'
             break
         case 'danger':
             selectedStyle =
