@@ -16,7 +16,7 @@ const Avatar: FC<{
                 alt={user.name}
                 className={`${className} z-10 rounded-full`}
             />
-            <div className="absolute inset-0 flex items-center justify-center rounded-full bg-gray-100 text-gray-500">
+            <div className="absolute inset-0 flex items-center justify-center rounded-full bg-slate-100 text-slate-500">
                 {user.name.split('')[0]}
             </div>
         </div>

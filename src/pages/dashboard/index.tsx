@@ -42,53 +42,53 @@ const Index: NextPage = () => {
                         </div>
                         <div className="mb-20 overflow-hidden bg-white shadow sm:rounded-lg">
                             <div className="px-4 py-5 sm:px-6">
-                                <h3 className="text-lg font-medium leading-6 text-gray-900">
+                                <h3 className="text-lg font-medium leading-6 text-slate-900">
                                     Your information
                                 </h3>
-                                <p className="mt-1 max-w-2xl text-sm text-gray-500">
+                                <p className="mt-1 max-w-2xl text-sm text-slate-500">
                                     Personal details about your account.
                                 </p>
                             </div>
-                            <div className="border-t border-gray-200">
+                            <div className="border-t border-slate-200">
                                 <dl>
-                                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
+                                    <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                        <dt className="text-sm font-medium text-slate-500">
                                             ID Number
                                         </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
                                             {user.id}
                                         </dd>
                                     </div>
                                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
+                                        <dt className="text-sm font-medium text-slate-500">
                                             Full name
                                         </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
                                             {user.name}
                                         </dd>
                                     </div>
-                                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
+                                    <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                        <dt className="text-sm font-medium text-slate-500">
                                             Email address
                                         </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
                                             {user.email}
                                         </dd>
                                     </div>
                                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
+                                        <dt className="text-sm font-medium text-slate-500">
                                             Account created:
                                         </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
                                             {user.created_at}
                                         </dd>
                                     </div>
                                     {user.roles.length >= 1 && (
-                                        <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                            <dt className="text-sm font-medium text-gray-500">
+                                        <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                            <dt className="text-sm font-medium text-slate-500">
                                                 Roles:
                                             </dt>
-                                            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                            <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
                                                 {user.roles.map(role => {
                                                     const isAdminRole =
                                                         role.name.toLowerCase() ===
@@ -96,7 +96,7 @@ const Index: NextPage = () => {
                                                     return (
                                                         <span
                                                             key={role.id}
-                                                            className="mr-2 inline-block rounded-lg bg-gray-800 px-2 py-1 text-white">
+                                                            className="mr-2 inline-block rounded-lg bg-slate-800 px-2 py-1 text-white">
                                                             {isAdminRole && (
                                                                 <StarIcon className="mr-1 inline-block h-4 w-4" />
                                                             )}

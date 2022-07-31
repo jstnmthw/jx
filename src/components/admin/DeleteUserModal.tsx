@@ -64,7 +64,7 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                     <form onSubmit={submitForm}>
                         <XIcon
                             onClick={handleClose}
-                            className="absolute right-4 top-4 block h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-600"
+                            className="absolute right-4 top-4 block h-6 w-6 cursor-pointer text-slate-400 hover:text-slate-600"
                         />
                         <div className="mb-8 flex grid grid-cols-5 p-10 pb-0">
                             <div className="col-span-1">
@@ -73,7 +73,7 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                                 </span>
                             </div>
                             <div className="col-span-4">
-                                <h2 className="mb-2 border-gray-200 text-lg font-medium">
+                                <h2 className="mb-2 border-slate-200 text-lg font-medium">
                                     Delete account
                                 </h2>
                                 {errors?.message && (
@@ -83,14 +83,14 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                                         </div>
                                     </>
                                 )}
-                                <p className="text-sm text-gray-600">
+                                <p className="text-sm text-slate-600">
                                     Are you sure you want to delete this
                                     account? All of the data will be permanently
                                     removed. This action cannot be undone.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-end space-x-2 bg-gray-100 p-3">
+                        <div className="flex justify-end space-x-2 bg-slate-100 p-3">
                             <Button
                                 type="button"
                                 buttonType="light"

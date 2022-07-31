@@ -4,7 +4,7 @@
 
 @layer components {
     #__next {
-        @apply flex min-h-screen flex-col;
+        @apply flex min-h-screen flex-col text-slate-900 dark:bg-slate-900 dark:text-white dark:text-neutral-300;
     }
     #__main {
         @apply flex flex-1
@@ -20,5 +20,20 @@
     }
     .text-gradient-hover-alt {
         @apply hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-600 hover:bg-clip-text hover:text-transparent;
+    }
+    .highlight {
+        @apply dark:border dark:border-transparent dark:border-t-slate-700
+    }
+    .highlight-hover {
+        @apply dark:border dark:border-transparent dark:border-t-slate-700 dark:hover:border-t-slate-600 group-hover:border-t-slate-600
+    }
+    .highlight-lighter {
+        @apply dark:border dark:border-transparent dark:border-t-slate-700
+    }
+    .highlight-lighter-hover {
+        @apply dark:border dark:border-transparent dark:border-t-slate-600 dark:hover:border-t-slate-500 group-hover:border-t-slate-500
+    }
+    .lowlight {
+        @apply dark:border dark:border-transparent dark:border-b-slate-700
     }
 }

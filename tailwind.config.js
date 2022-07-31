@@ -1,9 +1,13 @@
 module.exports = {
+    darkMode: 'class',
     content: ['./src/pages/**/*.tsx', './src/components/**/*.tsx'],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+            animation: {
+                gradient: 'gradient 3s linear infinite'
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
             },
             colors: {
                 blue: {
@@ -13,7 +17,7 @@ module.exports = {
                     100: '#6EB1FF',
                     200: '#469BFF',
                     300: '#1D85FF',
-                    400: '#0076ff',
+                    400: '#0F7CFF',
                     500: '#0070F3',
                     600: '#0056BB',
                     700: '#003C83',
@@ -21,8 +25,8 @@ module.exports = {
                     900: '#000913'
                 }
             },
-            animation: {
-                gradient: 'gradient 3s linear infinite'
+            fontFamily: {
+                sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
             },
             keyframes: {
                 gradient: {
