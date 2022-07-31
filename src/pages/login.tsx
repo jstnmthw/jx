@@ -110,7 +110,7 @@ const Login: NextPage = () => {
                                         id="remember_me"
                                         type="checkbox"
                                         name="remember"
-                                        className="rounded border-slate-300 text-blue-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:border-t dark:border-slate-600 dark:bg-slate-700 dark:checked:border-blue dark:checked:bg-blue dark:focus:ring-offset-slate-800"
+                                        className="highlight-lighter-hover rounded border-slate-300 text-blue-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:border-t dark:bg-slate-700 dark:checked:border-blue dark:checked:bg-blue dark:focus:ring-offset-slate-800"
                                     />
                                     <span className="ml-2 text-sm text-slate-600 dark:text-slate-300">
                                         Remember me

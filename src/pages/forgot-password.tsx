@@ -36,16 +36,20 @@ const ForgotPassword: NextPage = () => {
                             </a>
                         </Link>
                     </div>
-                    <h2 className="text-center text-xl font-semibold">
-                        Forgot password
+                    <h2 className="mb-5 text-center text-xl font-semibold">
+                        Reset password
                     </h2>
                     <form
                         onSubmit={submitForm}
-                        className="mb-6 w-[450px] rounded-lg p-8 shadow-xl">
+                        className="highlight mb-6 w-[450px] rounded-lg p-8 shadow-xl dark:bg-slate-800">
                         <ErrorCard errors={errors} className="mb-3" />
                         <StatusCard status={status} />
                         <div className="flex w-full items-center space-x-2">
-                            <Label htmlFor="name">Email:</Label>
+                            <Label
+                                htmlFor="name"
+                                className="dark:text-slate-300">
+                                Email:
+                            </Label>
                             <Input
                                 id="name"
                                 type="text"
@@ -67,7 +71,7 @@ const ForgotPassword: NextPage = () => {
                     </form>
                     <div className="flex justify-center">
                         <Link href="/login">
-                            <a className="text-sm text-slate-600 hover:text-slate-900 hover:underline">
+                            <a className="text-sm text-slate-600 hover:text-slate-900 hover:underline dark:text-slate-400 dark:hover:text-slate-300">
                                 Back to login
                             </a>
                         </Link>
