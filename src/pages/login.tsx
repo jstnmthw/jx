@@ -48,11 +48,11 @@ const Login: NextPage = () => {
             <main
                 id="__main"
                 className="items-center justify-center bg-slate-50 dark:bg-slate-900">
-                <div>
+                <div className="my-4 md:my-8">
                     <div className="mb-2 flex justify-center">
                         <Link href="/">
                             <a title="Homepage">
-                                <Logo className="h-14 w-14 text-blue" />
+                                <Logo className="h-14 w-14 dark:text-blue" />
                             </a>
                         </Link>
                     </div>
@@ -63,7 +63,7 @@ const Login: NextPage = () => {
                         <GradientShadow position="bottom" />
                         <form
                             onSubmit={submitForm}
-                            className="highlight relative mb-6 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow dark:bg-slate-800">
+                            className="highlight relative mb-8 w-full w-[400px] rounded-lg bg-white px-10 py-8 shadow dark:bg-slate-800">
                             <div>
                                 <ErrorCard errors={errors} className="mb-3" />
                                 <StatusCard status={status} />
@@ -119,7 +119,7 @@ const Login: NextPage = () => {
                             </div>
                             <div className="mt-4 flex items-center justify-between">
                                 <Link href="/forgot-password">
-                                    <a className="text-sm text-slate-600 underline hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200">
+                                    <a className="text-sm text-slate-600 hover:text-slate-900 hover:underline dark:text-slate-400 dark:hover:text-slate-200">
                                         Forgot your password?
                                     </a>
                                 </Link>
@@ -134,7 +134,7 @@ const Login: NextPage = () => {
                     </div>
                     <div className="text-center">
                         <Link href="/register">
-                            <a className="text-sm text-slate-600 underline hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200">
+                            <a className="text-sm text-slate-600 hover:text-slate-900 hover:underline dark:text-slate-400 dark:hover:text-slate-200">
                                 Don&apos;t have an account?
                             </a>
                         </Link>
