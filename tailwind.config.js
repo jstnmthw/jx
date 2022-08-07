@@ -10,6 +10,9 @@ module.exports = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
             },
             colors: {
+                slate: {
+                    850: '#232e42'
+                },
                 blue: {
                     DEFAULT: '#0070F3',
                     50: '#ACD2FF',

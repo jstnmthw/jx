@@ -65,7 +65,7 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                                 user={user}
                                             />
                                             <ChevronDownIcon
-                                                className="relative top-1 -mr-1 h-5 w-5"
+                                                className="relative top-1 -mr-1 h-4 w-4 dark:text-slate-500"
                                                 aria-hidden="true"
                                             />
                                         </Menu.Button>
@@ -78,7 +78,7 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                         leave="transition ease-in duration-75"
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95">
-                                        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <Menu.Items className="highlight absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
                                             <div className="px-1 py-1">
                                                 <Menu.Item>
                                                     {({ active }) => (
@@ -90,8 +90,8 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                                             }}
                                                             className={`${
                                                                 active
-                                                                    ? 'bg-slate-100 text-slate-900'
-                                                                    : 'text-slate-600'
+                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
+                                                                    : 'text-slate-600 dark:text-slate-500'
                                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
                                                             <ChartPieIcon className="mr-2 inline-block h-5 w-5" />
                                                             Dashboard
@@ -108,8 +108,8 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                                             }}
                                                             className={`${
                                                                 active
-                                                                    ? 'bg-slate-100 text-slate-900'
-                                                                    : 'text-slate-600'
+                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
+                                                                    : 'text-slate-600 dark:text-slate-500'
                                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
                                                             <CogIcon className="mr-2 inline-block h-5 w-5" />
                                                             Settings
@@ -122,8 +122,8 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                                             onClick={logout}
                                                             className={`${
                                                                 active
-                                                                    ? 'bg-slate-100 text-slate-900'
-                                                                    : 'text-slate-600'
+                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
+                                                                    : 'text-slate-600 dark:text-slate-500'
                                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
                                                             <LogoutIcon className="mr-2 inline-block h-5 w-5" />
                                                             Logout

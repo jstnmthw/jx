@@ -23,10 +23,12 @@ const Index: NextPage = () => {
                     <div className="mx-auto max-w-4xl overflow-auto px-2 sm:px-6 lg:px-8">
                         <div className="my-5 flex flex-col justify-between space-y-5 sm:flex-row sm:space-y-0">
                             <div>
-                                <h2 className="text-2xl font-semibold tracking-tight">
+                                <h2 className="text-2xl font-semibold tracking-tight dark:text-white">
                                     Dashboard page
                                 </h2>
-                                <div>Welcome, {user.name}</div>
+                                <div className="dark:text-slate-400">
+                                    Welcome, {user.name}
+                                </div>
                             </div>
                             <div>
                                 {user.roles.some(
@@ -40,55 +42,55 @@ const Index: NextPage = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="mb-20 overflow-hidden bg-white shadow sm:rounded-lg">
+                        <div className="highlight mb-20 overflow-hidden bg-white shadow dark:bg-slate-800 sm:rounded-lg">
                             <div className="px-4 py-5 sm:px-6">
-                                <h3 className="text-lg font-medium leading-6 text-slate-900">
+                                <h3 className="text-lg font-medium leading-6 text-slate-900 dark:text-slate-300">
                                     Your information
                                 </h3>
                                 <p className="mt-1 max-w-2xl text-sm text-slate-500">
                                     Personal details about your account.
                                 </p>
                             </div>
-                            <div className="border-t border-slate-200">
+                            <div className="border-t border-slate-200 dark:border-slate-700">
                                 <dl>
-                                    <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <div className="bg-slate-50 px-4 py-5 dark:bg-slate-800 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-slate-500">
                                             ID Number
                                         </dt>
-                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm  text-slate-900 dark:text-slate-100 sm:col-span-2 sm:mt-0">
                                             {user.id}
                                         </dd>
                                     </div>
-                                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <div className="bg-white px-4 py-5 dark:bg-slate-850 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-slate-500">
                                             Full name
                                         </dt>
-                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm  text-slate-900 dark:text-slate-100 sm:col-span-2 sm:mt-0">
                                             {user.name}
                                         </dd>
                                     </div>
-                                    <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <div className="bg-slate-50 px-4 py-5 dark:bg-slate-800 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-slate-500">
                                             Email address
                                         </dt>
-                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm  text-slate-900 dark:text-slate-100 sm:col-span-2 sm:mt-0">
                                             {user.email}
                                         </dd>
                                     </div>
-                                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <div className="bg-white px-4 py-5 dark:bg-slate-850 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-slate-500">
                                             Account created:
                                         </dt>
-                                        <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
+                                        <dd className="mt-1 text-sm  text-slate-900 dark:text-slate-100 sm:col-span-2 sm:mt-0">
                                             {user.created_at}
                                         </dd>
                                     </div>
                                     {user.roles.length >= 1 && (
-                                        <div className="bg-slate-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                        <div className="bg-slate-50 px-4 py-5 dark:bg-slate-800 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                             <dt className="text-sm font-medium text-slate-500">
                                                 Roles:
                                             </dt>
-                                            <dd className="mt-1 text-sm text-slate-900 sm:col-span-2 sm:mt-0">
+                                            <dd className="mt-1 text-sm text-slate-900 dark:text-slate-100 sm:col-span-2 sm:mt-0">
                                                 {user.roles.map(role => {
                                                     const isAdminRole =
                                                         role.name.toLowerCase() ===
