@@ -14,16 +14,16 @@ const AddUserModal: FC = () => {
         <>
             <Button
                 aria-label="Add User"
-                buttonType="light"
+                buttonType="primary"
                 onClick={() => setIsOpen(!isOpen)}>
                 Add User{' '}
-                <PlusCircleIcon className="ml-2 inline-block h-4 w-4 text-slate-400" />
+                <PlusCircleIcon className="ml-2 inline-block h-4 w-4 text-blue-100" />
             </Button>
             <Modal
                 isOpen={isOpen}
                 handleClose={handleClose}
                 header={
-                    <div className="m-10 mb-4 border-b border-slate-200 pb-2">
+                    <div className="m-10 mb-4 border-b border-slate-200 pb-2 dark:border-slate-700 dark:text-white">
                         Add new user
                     </div>
                 }

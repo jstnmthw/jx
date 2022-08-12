@@ -18,7 +18,7 @@ const Button: FC<ButtonProps> = ({
     switch (buttonType) {
         case 'light':
             selectedStyle =
-                'border border-slate-300 dark:text-slate-300 dark:hover:text-white highlight dark:bg-slate-800 transition-all text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none dark:ring-offset-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                'px-4 py-2 border border-slate-300 dark:text-slate-300 dark:hover:text-white highlight dark:bg-slate-800 transition-all text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none dark:ring-offset-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
             break
         case 'primary':
             selectedStyle =

@@ -1,25 +1,54 @@
 import React, { FC, useState } from 'react'
-import { User } from '@/types/user'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon, MenuAlt2Icon, XIcon } from '@heroicons/react/solid'
 import { ChartPieIcon, CogIcon, LogoutIcon } from '@heroicons/react/outline'
-import { useRouter } from 'next/router'
+import { User } from '@/types/user'
 import Logo from '@/components/Logo'
 import ButtonLink from '@/components/ui/ButtonLink'
 import Avatar from '@/components/ui/Avatar'
 import DarkModeButton from '@/components/ui/DarkModeButton'
 import Button from '@/components/ui/Button'
 import Modal from '@/components/ui/Modal'
+import { useRouter } from 'next/router'
+import { useAuth } from '@/hooks/auth'
 
-const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
-    const router = useRouter()
+const Header: FC<{ user?: User }> = ({ user }) => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const router = useRouter()
+    const { logout } = useAuth()
 
     function handleClose() {
         setMenuOpen(false)
     }
+
+    const MenuData = [
+        {
+            id: 1,
+            label: 'Dashboard',
+            onClick: () => router.push('/dashboard'),
+            icon: ({ className }: { className: string }) => (
+                <ChartPieIcon className={className} />
+            )
+        },
+        {
+            id: 2,
+            label: 'Settings',
+            onClick: () => router.push('/settings'),
+            icon: ({ className }: { className: string }) => (
+                <CogIcon className={className} />
+            )
+        },
+        {
+            id: 3,
+            label: 'Logout',
+            onClick: () => logout(),
+            icon: ({ className }: { className: string }) => (
+                <LogoutIcon className={className} />
+            )
+        }
+    ]
 
     return (
         <nav className="w-full border-b dark:border-slate-700 md:border-0">
@@ -44,7 +73,7 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                             Laravel&apos;s API.
                         </div>
                     </div>
-                    <div className="flex flex-row items-center gap-5">
+                    <div className="flex flex-row items-center gap-3">
                         <DarkModeButton
                             iconOnly
                             className="highlight-hover flex flex-none items-center justify-center rounded-md border bg-white p-1 text-slate-600 shadow transition-all hover:text-slate-900 dark:bg-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
@@ -65,7 +94,7 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                                 user={user}
                                             />
                                             <ChevronDownIcon
-                                                className="relative top-1 -mr-1 h-4 w-4 dark:text-slate-500"
+                                                className="relative top-2 ml-1 h-4 w-4 dark:text-slate-500"
                                                 aria-hidden="true"
                                             />
                                         </Menu.Button>
@@ -78,58 +107,36 @@ const Header: FC<{ user?: User; logout?: () => void }> = ({ user, logout }) => {
                                         leave="transition ease-in duration-75"
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95">
-                                        <Menu.Items className="highlight absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
+                                        <Menu.Items className="highlight absolute right-0 z-10 mt-2 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
                                             <div className="px-1 py-1">
-                                                <Menu.Item>
-                                                    {({ active }) => (
-                                                        <button
-                                                            onClick={() => {
-                                                                router.push(
-                                                                    '/dashboard'
-                                                                )
-                                                            }}
-                                                            className={`${
-                                                                active
-                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
-                                                                    : 'text-slate-600 dark:text-slate-500'
-                                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
-                                                            <ChartPieIcon className="mr-2 inline-block h-5 w-5" />
-                                                            Dashboard
-                                                        </button>
-                                                    )}
-                                                </Menu.Item>
-                                                <Menu.Item>
-                                                    {({ active }) => (
-                                                        <button
-                                                            onClick={() => {
-                                                                router.push(
-                                                                    '/my/settings'
-                                                                )
-                                                            }}
-                                                            className={`${
-                                                                active
-                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
-                                                                    : 'text-slate-600 dark:text-slate-500'
-                                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
-                                                            <CogIcon className="mr-2 inline-block h-5 w-5" />
-                                                            Settings
-                                                        </button>
-                                                    )}
-                                                </Menu.Item>
-                                                <Menu.Item>
-                                                    {({ active }) => (
-                                                        <button
-                                                            onClick={logout}
-                                                            className={`${
-                                                                active
-                                                                    ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/50 dark:text-slate-300'
-                                                                    : 'text-slate-600 dark:text-slate-500'
-                                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
-                                                            <LogoutIcon className="mr-2 inline-block h-5 w-5" />
-                                                            Logout
-                                                        </button>
-                                                    )}
-                                                </Menu.Item>
+                                                {MenuData.map(menuItem => {
+                                                    const MenuIcon =
+                                                        menuItem.icon
+                                                    return (
+                                                        <Menu.Item
+                                                            key={menuItem.id}>
+                                                            {({ active }) => (
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={
+                                                                        menuItem.onClick
+                                                                    }
+                                                                    className={`${
+                                                                        active
+                                                                            ? 'bg-slate-100 text-slate-900 dark:bg-slate-900/40 dark:text-slate-300'
+                                                                            : 'text-slate-600 dark:text-slate-400'
+                                                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium`}>
+                                                                    <div className="highlight-lighter-hover mr-2 flex h-6 w-6 flex-none items-center justify-center rounded-md bg-white shadow ring-1 ring-slate-900/10 dark:bg-slate-700 dark:shadow-none">
+                                                                        <MenuIcon className="h-4 w-4" />
+                                                                    </div>
+                                                                    {
+                                                                        menuItem.label
+                                                                    }
+                                                                </button>
+                                                            )}
+                                                        </Menu.Item>
+                                                    )
+                                                })}
                                             </div>
                                         </Menu.Items>
                                     </Transition>

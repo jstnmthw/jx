@@ -18,14 +18,15 @@ const EditUserModal: FC<{ user: User }> = ({ user }) => {
             <Button
                 aria-label="Edit User"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-slate-500 hover:text-slate-700">
+                className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300">
                 <PencilAltIcon className="inline-block h-5 w-5" />
             </Button>
             <Modal
+                backgroundBlur={true}
                 isOpen={isOpen}
                 handleClose={handleClose}
                 header={
-                    <div className="m-10 mb-4 border-b border-slate-200 pb-2">
+                    <div className="m-10 mb-4 border-b border-slate-200 pb-2 dark:border-slate-700 dark:text-white">
                         Edit {user.name}
                     </div>
                 }
