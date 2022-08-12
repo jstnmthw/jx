@@ -52,7 +52,7 @@ const Modal: FC<ModelProps> = ({
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95">
                                 <Dialog.Panel
-                                    className={`${shadowClass} w-full max-w-md transform overflow-hidden rounded-lg bg-white text-left align-middle transition-all`}>
+                                    className={`${shadowClass} w-full max-w-md transform overflow-hidden rounded-lg bg-white text-left align-middle transition-all dark:bg-slate-800`}>
                                     {header && (
                                         <Dialog.Title
                                             as="h3"

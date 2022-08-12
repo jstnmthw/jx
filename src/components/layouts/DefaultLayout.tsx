@@ -5,12 +5,12 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function DefaultLayout({ children }: Props) {
-    const { user, logout } = useAuth({
+    const { user } = useAuth({
         middleware: 'guest'
     })
     return (
         <>
-            <Header user={user} logout={logout} />
+            <Header user={user} />
             <main id="__main">{children}</main>
             <Footer />
         </>

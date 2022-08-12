@@ -58,6 +58,7 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                 <TrashIcon className="inline-block h-5 w-5" />
             </Button>
             <Modal
+                backgroundBlur={true}
                 isOpen={isOpen}
                 handleClose={handleClose}
                 body={
@@ -68,7 +69,7 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                         />
                         <div className="mb-8 flex grid grid-cols-5 p-10 pb-0">
                             <div className="col-span-1">
-                                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
+                                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-700/20">
                                     <ExclamationIcon className="inline-block h-7 w-7 text-red-600" />
                                 </span>
                             </div>
@@ -83,14 +84,14 @@ const DeleteUserModal: FC<{ user: User }> = ({ user }) => {
                                         </div>
                                     </>
                                 )}
-                                <p className="text-sm text-slate-600">
+                                <p className="text-sm text-slate-600 dark:text-slate-400">
                                     Are you sure you want to delete this
                                     account? All of the data will be permanently
                                     removed. This action cannot be undone.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-end space-x-2 bg-slate-100 p-3">
+                        <div className="flex justify-end space-x-2 bg-slate-100 p-3 dark:bg-slate-900/60">
                             <Button
                                 type="button"
                                 buttonType="light"

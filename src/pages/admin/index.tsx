@@ -2,13 +2,13 @@ import Head from 'next/head'
 import DefaultLayout from '@/components/layouts/DefaultLayout'
 import AddUserModal from '@/components/admin/AddUserModal'
 import EditUserModal from '@/components/admin/EditUserModal'
+import DeleteUserModal from '@/components/admin/DeleteUserModal'
+import Avatar from '@/components/ui/Avatar'
 import { useAuth } from '@/hooks/auth'
 import { useUsers } from '@/hooks/users'
 import { Role } from '@/types/auth'
 import { NextPage } from 'next'
 import { User } from '@/types/user'
-import DeleteUserModal from '@/components/admin/DeleteUserModal'
-import Avatar from '@/components/ui/Avatar'
 
 const Index: NextPage = () => {
     const { user: user }: { user: User } = useAuth({
@@ -28,25 +28,27 @@ const Index: NextPage = () => {
                     <div className="mx-auto h-full max-w-4xl overflow-auto px-2 sm:px-6 lg:px-8">
                         <div className="my-5 flex flex-col justify-between space-y-5 sm:flex-row sm:space-y-0">
                             <div>
-                                <h2 className="text-2xl font-semibold tracking-tight">
+                                <h2 className="text-2xl font-semibold tracking-tight dark:text-white">
                                     Admin page
                                 </h2>
-                                <div>Welcome, {user.name}</div>
+                                <div className="dark:text-slate-500">
+                                    Welcome, {user.name}
+                                </div>
                             </div>
                             <div>
                                 <AddUserModal />
                             </div>
                         </div>
                         {users && (!isLoading || !isValidating) ? (
-                            <div className="mb-20 w-full overflow-hidden bg-white shadow sm:rounded-lg">
-                                <div className="bg-slate-50 px-4 py-3 text-xs font-medium uppercase text-slate-500 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
+                            <div className="mb-20 w-full overflow-hidden shadow sm:rounded-lg">
+                                <div className="highlight bg-slate-50 px-4 py-3 text-xs font-medium uppercase text-slate-500 dark:border-b-slate-900/50 dark:bg-slate-800 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
                                     <div></div>
                                     <div>Name</div>
                                     <div>Status</div>
                                     <div>Roles</div>
                                     <div></div>
                                 </div>
-                                <div className="border-t border-slate-200">
+                                <div className="border-t border-slate-200 bg-white dark:border-t-gray-700/80 dark:bg-slate-800">
                                     {users.map(user => {
                                         return (
                                             <div
@@ -59,16 +61,16 @@ const Index: NextPage = () => {
                                                     />
                                                 </div>
                                                 <div className="col-span-3">
-                                                    <div className="font-medium text-black">
+                                                    <div className="font-medium text-black dark:text-white">
                                                         {user.name}
                                                     </div>
-                                                    <div className="text-sm text-slate-600">
+                                                    <div className="text-sm text-slate-600 dark:text-slate-400">
                                                         {user.email}
                                                     </div>
                                                 </div>
                                                 <div className="col-span-2">
                                                     {user.enabled ? (
-                                                        <span className="rounded-full bg-emerald-100 px-2 py-1 text-xs text-emerald-800">
+                                                        <span className="rounded-full bg-emerald-100 px-2 py-1 text-xs text-emerald-500 dark:border dark:border-emerald-700 dark:bg-emerald-500/10">
                                                             Active
                                                         </span>
                                                     ) : (
@@ -82,7 +84,7 @@ const Index: NextPage = () => {
                                                         (role: Role) => {
                                                             return (
                                                                 <span
-                                                                    className="mr-2 rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-800"
+                                                                    className="highlight-lightest mr-2 rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-800 dark:bg-slate-700 dark:text-slate-300"
                                                                     key={
                                                                         role.id
                                                                     }>
