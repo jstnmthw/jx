@@ -1,18 +1,19 @@
-import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import React, { FC, useState } from 'react'
+import { User } from '@/types/user'
+import { useAuth } from '@/hooks/auth'
+import { useRouter } from 'next/router'
 import { ChevronDownIcon, MenuAlt2Icon, XIcon } from '@heroicons/react/solid'
 import { ChartPieIcon, CogIcon, LogoutIcon } from '@heroicons/react/outline'
-import { User } from '@/types/user'
 import Logo from '@/components/Logo'
-import ButtonLink from '@/components/ui/ButtonLink'
-import Avatar from '@/components/ui/Avatar'
-import DarkModeButton from '@/components/ui/DarkModeButton'
-import Button from '@/components/ui/Button'
 import Modal from '@/components/ui/Modal'
-import { useRouter } from 'next/router'
-import { useAuth } from '@/hooks/auth'
+import Avatar from '@/components/ui/Avatar'
+import Button from '@/components/ui/Button'
+import ButtonLink from '@/components/ui/ButtonLink'
+import DarkModeButton from '@/components/ui/DarkModeButton'
+import RepoReleases from '@/components/ui/RepoReleases'
 
 const Header: FC<{ user?: User }> = ({ user }) => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -78,27 +79,22 @@ const Header: FC<{ user?: User }> = ({ user }) => {
                             iconOnly
                             className="highlight-hover flex flex-none items-center justify-center rounded-md border bg-white p-1 text-slate-600 shadow transition-all hover:text-slate-900 dark:bg-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
                         />
-                        <Button className="group text-sm font-medium text-slate-600 transition-colors dark:text-slate-400 dark:hover:text-slate-300">
-                            v0.1.0
-                            <ChevronDownIcon className="inline-block h-4 w-4 transition-colors dark:text-slate-600 dark:group-hover:text-slate-500" />
-                        </Button>
+                        <RepoReleases />
                         {user ? (
                             <>
                                 <Menu
                                     as="div"
-                                    className="relative inline-block text-left">
-                                    <div>
-                                        <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                                            <Avatar
-                                                className={'h-8 w-8'}
-                                                user={user}
-                                            />
-                                            <ChevronDownIcon
-                                                className="relative top-2 ml-1 h-4 w-4 dark:text-slate-500"
-                                                aria-hidden="true"
-                                            />
-                                        </Menu.Button>
-                                    </div>
+                                    className="relative block text-left">
+                                    <Menu.Button className="inline-flex w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                                        <Avatar
+                                            className={'h-8 w-8'}
+                                            user={user}
+                                        />
+                                        <ChevronDownIcon
+                                            className="relative top-2 ml-1 h-4 w-4 dark:text-slate-500"
+                                            aria-hidden="true"
+                                        />
+                                    </Menu.Button>
                                     <Transition
                                         as={Fragment}
                                         enter="transition ease-out duration-100"
@@ -107,8 +103,8 @@ const Header: FC<{ user?: User }> = ({ user }) => {
                                         leave="transition ease-in duration-75"
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95">
-                                        <Menu.Items className="highlight absolute right-0 z-10 mt-2 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
-                                            <div className="px-1 py-1">
+                                        <Menu.Items className="highlight absolute right-0 z-10 mt-2 w-40 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
+                                            <div className="p-1">
                                                 {MenuData.map(menuItem => {
                                                     const MenuIcon =
                                                         menuItem.icon
