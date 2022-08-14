@@ -41,7 +41,7 @@ const RepoReleases: FC = () => {
                 leave="transition ease-in duration-75"
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95">
-                <Menu.Items className="highlight absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
+                <Menu.Items className="highlight absolute right-0 z-10 mt-2 w-24 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-800">
                     {data.map((release, idx) => {
                         return (
                             <Menu.Item key={idx}>
@@ -52,8 +52,8 @@ const RepoReleases: FC = () => {
                                         type="button"
                                         className={
                                             (active
-                                                ? 'text-slate-200'
-                                                : 'text-slate-400') +
+                                                ? 'font-medium text-slate-800 dark:text-slate-200'
+                                                : 'font-medium text-slate-500 dark:text-slate-400') +
                                             ' b-0 block w-full px-3 py-1.5 text-sm'
                                         }
                                         rel="noreferrer">
