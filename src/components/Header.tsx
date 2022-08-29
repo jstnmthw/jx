@@ -84,14 +84,14 @@ const Header: FC<{ user?: User }> = ({ user }) => {
                             <>
                                 <Menu
                                     as="div"
-                                    className="relative block text-left">
-                                    <Menu.Button className="inline-flex w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                                    className="relative h-8 block text-left">
+                                    <Menu.Button className="inline-flex group w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <Avatar
                                             className={'h-8 w-8'}
                                             user={user}
                                         />
                                         <ChevronDownIcon
-                                            className="relative top-2 ml-1 h-4 w-4 dark:text-slate-500"
+                                            className="relative top-2 ml-1 h-4 w-4 dark:text-slate-600 dark:group-hover:text-slate-500"
                                             aria-hidden="true"
                                         />
                                     </Menu.Button>
