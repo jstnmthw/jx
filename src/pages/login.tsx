@@ -9,8 +9,8 @@ import Logo from '@/components/Logo'
 import ErrorCard from '@/components/form/ErrorCard'
 import StatusCard from '@/components/form/StatusCard'
 import Head from 'next/head'
-import Link from 'next/link'
 import GradientShadow from '@/components/ui/GradientShadow'
+import Link from 'next/link'
 
 const Login: NextPage = () => {
     const router = useRouter()

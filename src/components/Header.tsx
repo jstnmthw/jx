@@ -36,7 +36,7 @@ const Header: FC<{ user?: User }> = ({ user }) => {
         {
             id: 2,
             label: 'Settings',
-            onClick: () => router.push('/settings'),
+            onClick: () => router.push('/my/profile'),
             icon: ({ className }: { className: string }) => (
                 <CogIcon className={className} />
             )
@@ -84,8 +84,8 @@ const Header: FC<{ user?: User }> = ({ user }) => {
                             <>
                                 <Menu
                                     as="div"
-                                    className="relative h-8 block text-left">
-                                    <Menu.Button className="inline-flex group w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                                    className="relative block h-8 text-left">
+                                    <Menu.Button className="group inline-flex w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <Avatar
                                             className={'h-8 w-8'}
                                             user={user}
