@@ -61,3 +61,28 @@ npm run type-check
 # or
 npm run tc
 ```
+
+## Documentation
+### User Model
+In order for authentication to work out of the box, some assumptions need to be made. The follow is how we assume your users model is set up. Jx checks for the role `Admin` behind the scenes and is what is checked for `/admin/` dashboard.
+```json
+{
+  "id": 1,
+  "name": "Justin",
+  "email": "hello@example.com",
+  "avatar": "https://www.gravatar.com/avatar/xx?d=blank",
+  "enabled": true,
+  "email_verified": true,
+  "created_at": "2022-01-01T00:00:00.000000Z",
+  "roles": [
+    {
+      "id": 1,
+      "name": "User"
+    },
+    {
+      "id": 2,
+      "name": "Admin"
+    }
+  ]
+}
+```
