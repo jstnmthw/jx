@@ -13,6 +13,7 @@ import { Role } from '@/types/auth'
 import { User } from '@/types/user'
 import { ExclamationIcon, SelectorIcon } from '@heroicons/react/outline'
 import { useSWRConfig } from 'swr'
+import classNames from '@/helpers/classNames'
 import Label from '@/components/form/Label'
 import Input from '@/components/form/Input'
 import Button from '@/components/ui/Button'
@@ -24,10 +25,6 @@ interface AddUserErrorProps extends SetStateAction<any> {
     email?: string
     password?: string
     password_confirmation?: string
-}
-
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
 }
 
 const UserForm: FC<{

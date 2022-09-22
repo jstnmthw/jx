@@ -12,6 +12,7 @@ import {
     ResetPasswordParams
 } from '@/types/auth'
 import { User } from '@/types/user'
+
 export const useAuth = ({
     middleware,
     redirectIfAuthenticated,
