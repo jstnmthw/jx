@@ -64,7 +64,7 @@ npm run tc
 
 ## Documentation
 ### User Model
-In order for authentication to work out of the box, some assumptions need to be made. The follow is how we assume your users model is set up. Jx checks for the role `Admin` behind the scenes and is what is checked for `/admin/` dashboard.
+In order for authentication to work out of the box, some assumptions need to be made. The following is how we assume your User model is set up. Jx checks for the role `Admin` behind the scenes and is what is checked for `/admin/` dashboard.
 ```json
 {
   "id": 1,
