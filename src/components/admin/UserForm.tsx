@@ -151,12 +151,11 @@ const UserForm: FC<{
                             }
                         })
                     }}
-                    className={
-                        'mt-1 ' +
-                        (errors?.errors?.name
-                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                            : '')
-                    }
+                    className={classNames(
+                        errors?.errors?.name &&
+                            'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                        'mt-1'
+                    )}
                 />
             </div>
             <div className={`${user ? 'mb-5' : 'mb-3'}`}>
@@ -180,12 +179,11 @@ const UserForm: FC<{
                             }
                         })
                     }}
-                    className={
-                        'mt-1 ' +
-                        (errors?.errors?.email
-                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                            : '')
-                    }
+                    className={classNames(
+                        errors?.errors?.email &&
+                            'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                        'mt-1'
+                    )}
                 />
             </div>
             {user === undefined ? (
@@ -214,12 +212,11 @@ const UserForm: FC<{
                                     }
                                 })
                             }}
-                            className={
-                                'mt-1 ' +
-                                (errors?.errors?.password
-                                    ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                                    : '')
-                            }
+                            className={classNames(
+                                errors?.errors?.password &&
+                                    'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                                'mt-1'
+                            )}
                         />
                     </div>
                     <div className="mb-3">
@@ -248,12 +245,11 @@ const UserForm: FC<{
                                     }
                                 })
                             }}
-                            className={
-                                'mt-1 ' +
-                                (errors?.errors?.password_confirmation
-                                    ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                                    : '')
-                            }
+                            className={classNames(
+                                errors?.errors?.password_confirmation &&
+                                    'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                                'mt-1'
+                            )}
                         />
                     </div>
                 </>
@@ -283,12 +279,11 @@ const UserForm: FC<{
                                     }
                                 })
                             }}
-                            className={
-                                'mt-1 ' +
-                                (errors?.errors?.new_password
-                                    ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                                    : '')
-                            }
+                            className={classNames(
+                                errors?.errors?.new_password &&
+                                    'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                                'mt-1'
+                            )}
                         />
                     </div>
                     <div className="mb-3">
@@ -317,12 +312,11 @@ const UserForm: FC<{
                                     }
                                 })
                             }}
-                            className={
-                                'mt-1 ' +
-                                (errors?.name
-                                    ? 'border-red-500 focus:border-red-500 focus:ring-red-500/30'
-                                    : '')
-                            }
+                            className={classNames(
+                                errors?.errors?.password_confirmation &&
+                                    'border-red-500 focus:border-red-500 focus:ring-red-500/30',
+                                'mt-1'
+                            )}
                         />
                     </div>
                 </>

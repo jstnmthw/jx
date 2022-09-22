@@ -3,6 +3,7 @@ import React from 'react'
 import { Props } from '@/types/props'
 import { CogIcon, UserCircleIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
+import classNames from '@/helpers/classNames'
 
 export default function SettingsLayout({ children }: Props) {
     const router = useRouter()
@@ -42,20 +43,20 @@ export default function SettingsLayout({ children }: Props) {
                                 <li key={menuItem.id}>
                                     <Link href={menuItem.url} passHref>
                                         <a
-                                            className={
-                                                (router.pathname == menuItem.url
-                                                    ? 'border-blue-500 bg-blue-100/10 text-slate-800 '
-                                                    : 'border-transparent bg-white text-slate-600 hover:text-slate-800 ') +
+                                            className={classNames(
+                                                router.pathname == menuItem.url
+                                                    ? 'border-blue-500 bg-blue-100/10 text-slate-800'
+                                                    : 'border-transparent bg-white text-slate-600 hover:text-slate-800',
                                                 'inline-block flex w-full items-center border-l-4 px-4 py-3 text-sm font-medium'
-                                            }>
+                                            )}>
                                             <MenuIcon
-                                                className={
-                                                    (router.pathname ==
-                                                    menuItem.url
-                                                        ? 'text-blue-200 '
-                                                        : 'text-gray-400 ') +
+                                                className={classNames(
+                                                    router.pathname ==
+                                                        menuItem.url
+                                                        ? 'text-blue-200'
+                                                        : 'text-gray-400',
                                                     'mr-3 inline-block h-5 w-5'
-                                                }
+                                                )}
                                             />
                                             {menuItem.label}
                                         </a>
